@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>jQuery - </title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<button class="btn1">slide up</button>
+	<button class="btn2">slide down</button>
+	<button class="btn3">slide toggle</button>
+
+	<button class="btn4">Fade Out</button>
+	<button class="btn5">Fade In</button>
+	<button class="btn6">Fade Toggle</button>
+	<button class="btn7">Fade To</button>
+	<button class="animate">Animation</button>
+
+	<div class="box"></div>
+	
+
+
+	<script src="js/jquery-3.6.0.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".btn1").click(function(){
+				$(".box").slideUp(2000);
+			});
+			$(".btn2").click(function(){
+				$(".box").slideDown(2000);
+			});
+			$(".btn3").click(function(){
+				$(".box").slideToggle(2000);
+			});
+
+			$(".btn4").click(function(){
+				$(".box").fadeOut(2000);
+			});
+			$(".btn5").click(function(){
+				$(".box").fadeIn(2000);
+			});
+			$(".btn6").click(function(){
+				$(".box").fadeToggle(2000);
+			});
+			$(".btn7").click(function(){
+				$(".box").fadeTo(2000, 0.5);
+			});
+			$(".animate").click(function(){
+				$(".box").animate({
+					height: '200px',
+					width: '600px',
+					left: '300px',
+					top: '300px'
+				});
+			});
+		});
+	</script>
+</body>
+</html>
